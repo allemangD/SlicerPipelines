@@ -1,18 +1,26 @@
 #-----------------------------------------------------------------------------
-set(MODULE_NAME PipelineModules)
+set(MODULE_NAME LegacyPipelineCreator)
 
 #-----------------------------------------------------------------------------
 set(MODULE_PYTHON_SCRIPTS
   ${MODULE_NAME}.py
+  Widgets/SelectModulePopUp.py
+  Widgets/PipelineModuleListWidget.py
 
-  _${MODULE_NAME}/SegmentationsWrapping.py
-  _${MODULE_NAME}/SegmentEditorWrapping.py
-  _${MODULE_NAME}/SurfaceToolboxWrapping.py
-  _${MODULE_NAME}/vtkWrapping.py
+  LegacyPipelineCreatorLib/_Private/ModuleTemplate.py
+  LegacyPipelineCreatorLib/PipelineBases.py
+  LegacyPipelineCreatorLib/Asynchrony.py
   )
 
 set(MODULE_PYTHON_RESOURCES
   Resources/Icons/${MODULE_NAME}.png
+  Resources/UI/${MODULE_NAME}.ui
+
+  Resources/PipelineTemplateModule/CMakeLists.txt.template
+  Resources/PipelineTemplateModule/XXX.py.template
+  Resources/PipelineTemplateModule/CommandLineScripts/RunXXX.py.template
+  Resources/PipelineTemplateModule/Resources/Icons/XXX.png
+  Resources/PipelineTemplateModule/Resources/UI/XXX.ui
   )
 
 #-----------------------------------------------------------------------------

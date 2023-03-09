@@ -1,18 +1,15 @@
 #-----------------------------------------------------------------------------
-set(MODULE_NAME PipelineModules)
+set(MODULE_NAME LegacyPipelineCaseIterator)
 
 #-----------------------------------------------------------------------------
 set(MODULE_PYTHON_SCRIPTS
   ${MODULE_NAME}.py
-
-  _${MODULE_NAME}/SegmentationsWrapping.py
-  _${MODULE_NAME}/SegmentEditorWrapping.py
-  _${MODULE_NAME}/SurfaceToolboxWrapping.py
-  _${MODULE_NAME}/vtkWrapping.py
   )
 
 set(MODULE_PYTHON_RESOURCES
   Resources/Icons/${MODULE_NAME}.png
+  Resources/UI/${MODULE_NAME}.ui
+  Resources/CommandLineScripts/LegacyPipelineCaseIteratorRunner.py
   )
 
 #-----------------------------------------------------------------------------
